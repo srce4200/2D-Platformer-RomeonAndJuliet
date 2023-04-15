@@ -20,13 +20,17 @@ public class DialogueMain : MonoBehaviour
     string currentText = "";
     int currentDialogNumber = 0;
     bool canSkip = false;
+    DialogueList dialogueList; 
+    bool oneTime1;
     private void Start()
     {
         dialogTexts = null;
         peopleNames = null;
     }
-    public void StartConversation(DialogueList dialog)
+    public void StartConversation(DialogueList dialog, bool oneTime)
     {
+        dialogueList = dialog;
+        oneTime1 = oneTime;
         dialogTexts = dialog.DialogConvo;
         peopleNames = dialog.peopleInConvo;
         StartCoroutine("TypeText");
@@ -99,6 +103,11 @@ public class DialogueMain : MonoBehaviour
         convoText_1.text = ""; convoText_2.text = "";
         currentDialogNumber = 0;
         dialogTexts = null; peopleNames = null;
+        if (oneTime1)
+        {
+            dialogueList.gameObject.tag = "Untagged";
+            Destroy(dialogueList);
+        }
         GetComponentInChildren<PlayerMovement>().enabled = true;
     }
 }

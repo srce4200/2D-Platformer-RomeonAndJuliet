@@ -16,7 +16,13 @@ public class StartDialogue : MonoBehaviour
     }
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.E) && currentInteract != null && dialogueMain.dialogTexts == null)
+        if(currentInteract != null && dialogueMain.dialogTexts == null && currentInteract.GetComponent<DialogueList>().startDialogOnTrigger)
+        {
+            currentInteract.GetComponent<DialogueList>().StartConversation();
+            print(currentInteract.name);
+            currentInteract = null;
+        }
+        else if(Input.GetKeyDown(KeyCode.E) && currentInteract != null && dialogueMain.dialogTexts == null)
         {
             currentInteract.GetComponent<DialogueList>().StartConversation();
             print(currentInteract.name);

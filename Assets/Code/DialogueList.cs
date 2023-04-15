@@ -10,6 +10,7 @@ public class DialogText
 }
 public class DialogueList : MonoBehaviour
 {
+    public bool startDialogOnTrigger;
     DialogueMain convoUi;
     public List<string> peopleInConvo = new List<string>();
     public List<DialogText> DialogConvo = new List<DialogText>();
@@ -20,6 +21,6 @@ public class DialogueList : MonoBehaviour
     }
     public void StartConversation()
     {
-        convoUi.StartConversation(this);
+        convoUi.StartConversation(this, startDialogOnTrigger);
     }
 }
