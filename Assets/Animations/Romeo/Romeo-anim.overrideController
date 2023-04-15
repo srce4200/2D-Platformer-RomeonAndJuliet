@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Romeo-anim
+  m_Controller: {fileID: 9100000, guid: a3bcbabe97e39db47ad049c84de697b1, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 17102c90960064c4eb19737ec73aa5c8, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 563d14a324fe428468c8e294c860b8ab, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: de5031cc4f338184b8322de55d840bb1, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 1e5ee7fd077cfd74daa397b341baf8b2, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 3ecfe76430d853845ad15ccd9c959eb3, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 8ca32209d1e625943bbbc8103a993973, type: 2}
